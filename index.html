@@ -36,9 +36,42 @@ $(function(){
 		"padding-left": "5%",
 		"padding-right": "5%"
 	});
+    }else{
+	    let url = "";
+	    switch(getUrlParam("domain")){
+	    	case:"xianquzan":
+			url = 'https://xianquzan.com';  
+			break;
+		case:"doule":
+			 url = 'https://doule168.com';  
+			break;
+		case:"douxing":
+			 url = 'https://douxing.vip';  
+			break;
+		case:"hongren":
+			 url = 'https://hongren360.vip';
+			break;
+		case:"zhuanzanzan":
+			 url = 'http://zhuanzanzan.com';
+			break;
+	    }
+	    
+	   window.location.href = url+"/share.html?id="+getUrlParam('id');
     }
 	
  })
+	    
+function getUrlParam(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if(r != null) {
+		return decodeURI(r[2]);
+	}
+	return null;
+}
+	    
+	     //https://kikitest1.gpdvx.cn/share.html?id=52846   
+	
     </script>
 </head>
 <body>
